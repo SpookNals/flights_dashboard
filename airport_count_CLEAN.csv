@@ -1,0 +1,374 @@
+Name,Latitude,Longitude,Country,Org/Des,Region,LSV,City,Count,delay_minutes
+Berlin-Tegel International Airport,52.55970001,13.2876997,Germany,EDDT,Europe,Arrivals,Berlin,6183,10.09
+London Heathrow Airport,51.4706,-0.461941,United Kingdom,EGLL,Europe,Arrivals,London,6161,10.94
+Amsterdam Airport Schiphol,52.30860138,4.76388979,Netherlands,EHAM,Europe,Arrivals,Amsterdam,5340,13.78
+Vienna International Airport,48.11029816,16.56970024,Austria,LOWW,Europe,Arrivals,Vienna,5273,9.66
+Frankfurt am Main International Airport,50.0333333,8.5705556,Germany,EDDF,Europe,Arrivals,Frankfurt,4975,9.35
+Düsseldorf International Airport,51.28950119,6.7667799,Germany,EDDL,Europe,Arrivals,Duesseldorf,4870,8.44
+Hamburg Airport,53.63040161,9.988229752,Germany,EDDH,Europe,Arrivals,Hamburg,4031,8.23
+Adolfo Suárez Madrid–Barajas Airport,40.471926,-3.56264,Spain,LEMD,Europe,Arrivals,Madrid,4001,12.0
+Charles de Gaulle International Airport,49.01279831,2.549999952,France,LFPG,Europe,Arrivals,Paris,3988,10.27
+Geneva Cointrin International Airport,46.23809814,6.108950138,Switzerland,LSGG,Europe,Arrivals,Geneva,3886,12.71
+Munich International Airport,48.35380173,11.78610039,Germany,EDDM,Europe,Arrivals,Munich,3754,9.07
+London City Airport,51.505299,0.055278,United Kingdom,EGLC,Europe,Arrivals,London,3429,10.36
+Copenhagen Kastrup Airport,55.61790085,12.65600014,Denmark,EKCH,Europe,Arrivals,Copenhagen,2631,10.47
+Barcelona International Airport,41.29710007,2.078459978,Spain,LEBL,Europe,Arrivals,Barcelona,2557,14.6
+Belgrade Nikola Tesla Airport,44.81840134,20.3090992,Serbia,LYBE,Europe,Arrivals,Belgrade,2508,11.98
+Lisbon Portela Airport,38.78129959,-9.135919571,Portugal,LPPT,Europe,Arrivals,Lisbon,2481,17.93
+Leonardo da Vinci–Fiumicino Airport,41.8002778,12.2388889,Italy,LIRF,Europe,Arrivals,Rome,2442,7.9
+Warsaw Chopin Airport,52.16569901,20.96710014,Poland,EPWA,Europe,Arrivals,Warsaw,2298,10.32
+Stockholm-Arlanda Airport,59.65190125,17.91860008,Sweden,ESSA,Europe,Arrivals,Stockholm,2240,9.93
+Eleftherios Venizelos International Airport,37.93640137,23.94449997,Greece,LGAV,Europe,Arrivals,Athens,2202,14.26
+Brussels Airport,50.90140152,4.48443985,Belgium,EBBR,Europe,Arrivals,Brussels,2093,13.85
+Palma De Mallorca Airport,39.55170059,2.738810062,Spain,LEPA,Europe,Arrivals,Palma de Mallorca,2025,13.77
+Priština International Airport,42.5728,21.035801,Serbia,BKPR,Europe,Arrivals,Pristina,1944,13.89
+Stuttgart Airport,48.68989944,9.221960068,Germany,EDDS,Europe,Arrivals,Stuttgart,1931,11.16
+Francisco de Sá Carneiro Airport,41.24810028,-8.681389809,Portugal,LPPR,Europe,Arrivals,Porto,1842,15.85
+Atatürk International Airport,40.97689819,28.81459999,Turkey,LTBA,Europe,Arrivals,Istanbul,1818,12.03
+Malpensa International Airport,45.6306,8.72811,Italy,LIMC,Europe,Arrivals,Milano,1730,15.6
+Cologne Bonn Airport,50.86589813,7.142739773,Germany,EDDK,Europe,Arrivals,Cologne,1662,7.92
+Nice-Côte d'Azur Airport,43.65840149,7.215869904,France,LFMN,Europe,Arrivals,Nice,1624,9.6
+Ben Gurion International Airport,32.01139832,34.88669968,Israel,LLBG,Asia,Arrivals,Tel-aviv,1541,12.84
+Hannover Airport,52.46110153,9.685079575,Germany,EDDV,Europe,Arrivals,Hannover,1492,13.54
+Antalya International Airport,36.898701,30.800501,Turkey,LTAI,Europe,Arrivals,Antalya,1465,15.12
+John F Kennedy International Airport,40.63980103,-73.77890015,United States,KJFK,America,Arrivals,New York,1432,16.25
+Nuremberg Airport,49.498699,11.0780556,Germany,EDDN,Europe,Arrivals,Nuernberg,1402,10.93
+Venice Marco Polo Airport,45.505299,12.3519,Italy,LIPZ,Europe,Arrivals,Venice,1388,15.35
+Václav Havel Airport Prague,50.1008,14.26,Czech Republic,LKPR,Europe,Arrivals,Prague,1357,12.39
+Dublin Airport,53.42129898,-6.270070076,Ireland,EIDW,Europe,Arrivals,Dublin,1345,10.52
+Budapest Ferenc Liszt International Airport,47.43690109,19.25559998,Hungary,LHBP,Europe,Arrivals,Budapest,1324,13.29
+Peretola Airport,43.810001,11.2051,Italy,LIRQ,Europe,Arrivals,Florence,1302,13.93
+Zagreb Airport,45.74290085,16.06879997,Croatia,LDZA,Europe,Arrivals,Zagreb,1160,8.9
+Doha International Airport,25.26110077,51.56510162,Qatar,OTBD,Asia,Arrivals,Doha,1150,2.54
+Luxembourg-Findel International Airport,49.6233333,6.2044444,Luxembourg,ELLX,Europe,Arrivals,Luxemburg,1145,10.72
+Málaga Airport,36.67490005,-4.499110222,Spain,LEMG,Europe,Arrivals,Malaga,1135,9.71
+Helsinki Vantaa Airport,60.31719971,24.9633007,Finland,EFHK,Europe,Arrivals,Helsinki,1124,6.99
+Singapore Changi Airport,1.35019,103.994003,Singapore,WSSS,Asia,Arrivals,Singapore,1092,5.62
+Dubai International Airport,25.25279999,55.36439896,United Arab Emirates,OMDB,Asia,Arrivals,Dubai,1079,5.89
+Valencia Airport,39.48929977,-0.481624991,Spain,LEVC,Europe,Arrivals,Valencia,1072,10.23
+Newark Liberty International Airport,40.69250107,-74.16870117,United States,KEWR,America,Arrivals,Newark,1032,17.87
+Oslo Gardermoen Airport,60.19390106,11.10039997,Norway,ENGM,Europe,Arrivals,Oslo,1005,11.67
+Lugano Airport,46.00429916,8.910579681,Switzerland,LSZA,Europe,Arrivals,Lugano,993,8.17
+Suvarnabhumi Airport,13.68109989,100.7470016,Thailand,VTBS,Asia,Arrivals,Bangkok,992,12.58
+Manchester Airport,53.35369873,-2.274950027,United Kingdom,EGCC,Europe,Arrivals,Manchester,945,11.84
+Chek Lap Kok International Airport,22.30890083,113.9150009,Hong Kong,VHHH,Asia,Arrivals,Hong Kong,943,11.71
+Domodedovo International Airport,55.40879822,37.90629959,Russia,UUDD,Europe,Arrivals,Moscow,907,13.6
+Sheremetyevo International Airport,55.972599,37.4146,Russia,UUEE,Europe,Arrivals,Moscow,889,2.84
+Muscat International Airport,23.59329987,58.28440094,Oman,OOMS,Asia,Arrivals,Muscat,868,4.78
+Hurghada International Airport,27.17830086,33.79940033,Egypt,HEGN,Africa,Arrivals,Hurghada,858,10.95
+Sabiha Gökçen International Airport,40.89860153,29.30920029,Turkey,LTFJ,Europe,Arrivals,Istanbul,830,11.97
+Ljubljana Jože Pučnik Airport,46.223701,14.4576,Slovenia,LJLJ,Europe,Arrivals,Ljubljana,820,11.82
+Boryspil International Airport,50.34500122,30.8946991,Ukraine,UKBB,Europe,Arrivals,Kiev,819,13.47
+Birmingham International Airport,52.45389938,-1.748029947,United Kingdom,EGBB,Europe,Arrivals,Birmingham,753,11.62
+Skopje Alexander the Great Airport,41.961601,21.621401,Macedonia,LWSK,Europe,Arrivals,Skopje,726,10.36
+Dresden Airport,51.13280106,13.76720047,Germany,EDDC,Europe,Arrivals,Dresden,713,11.22
+Miami International Airport,25.79319954,-80.29060364,United States,KMIA,America,Arrivals,Miami,711,16.09
+London Luton Airport,51.87469864,-0.368333012,United Kingdom,EGGW,Europe,Arrivals,London,707,19.27
+London Gatwick Airport,51.14810181,-0.190277994,United Kingdom,EGKK,Europe,Arrivals,London,696,19.43
+Bremen Airport,53.04750061,8.786669731,Germany,EDDW,Europe,Arrivals,Bremen,674,15.63
+Riga International Airport,56.92359924,23.97109985,Latvia,EVRA,Europe,Arrivals,Riga,666,11.54
+San Francisco International Airport,37.61899948,-122.375,United States,KSFO,America,Arrivals,San Francisco,651,24.72
+Chicago O'Hare International Airport,41.97859955,-87.90480042,United States,KORD,America,Arrivals,Chicago,630,15.56
+Larnaca International Airport,34.87509918,33.62490082,Cyprus,LCLK,Asia,Arrivals,Larnaca,626,9.53
+Bordeaux-Mérignac Airport,44.82830048,-0.715556026,France,LFBD,Europe,Arrivals,Bordeaux,621,15.15
+Malta International Airport,35.857498,14.4775,Malta,LMML,Europe,Arrivals,Malta,610,15.19
+Washington Dulles International Airport,38.94449997,-77.45580292,United States,KIAD,America,Arrivals,Washington,594,4.62
+Naples International Airport,40.886002,14.2908,Italy,LIRN,Europe,Arrivals,Naples,590,8.03
+Gothenburg-Landvetter Airport,57.66279984,12.27980042,Sweden,ESGG,Europe,Arrivals,Gothenborg,586,10.05
+General Edward Lawrence Logan International Airport,42.36429977,-71.00520325,United States,KBOS,America,Arrivals,Boston,582,17.45
+Henri Coandă International Airport,44.5711111,26.085,Romania,LROP,Europe,Arrivals,Bucharest,581,10.79
+Lester B. Pearson International Airport,43.67720032,-79.63059998,Canada,CYYZ,America,Arrivals,Toronto,572,18.27
+Gran Canaria Airport,27.93190002,-15.38659954,Spain,GCLP,Atlantic,Arrivals,Gran Canaria,571,11.84
+Abu Dhabi International Airport,24.43300056,54.65110016,United Arab Emirates,OMAA,Asia,Arrivals,Abu Dhabi,569,7.24
+Heraklion International Nikos Kazantzakis Airport,35.33969879,25.18029976,Greece,LGIR,Europe,Arrivals,Heraklion,549,9.79
+Tenerife South Airport,28.04450035,-16.57250023,Spain,GCTS,Atlantic,Arrivals,Tenerife,538,6.9
+Guarulhos - Governador André Franco Montoro International Airport,-23.43555641,-46.47305679,Brazil,SBGR,America,Arrivals,Sao Paulo,523,11.92
+Narita International Airport,35.76470184,140.3860016,Japan,RJAA,Asia,Arrivals,Tokyo,503,16.55
+OR Tambo International Airport,-26.1392,28.246,South Africa,FAJS,Africa,Arrivals,Johannesburg,470,7.78
+Lyon Saint-Exupéry Airport,45.7255556,5.0811111,France,LFLL,Europe,Arrivals,Lyon,470,3.07
+Montreal / Pierre Elliott Trudeau International Airport,45.47060013,-73.74079895,Canada,CYUL,America,Arrivals,Montreal,466,16.7
+Beijing Capital International Airport,40.08010101,116.5849991,China,ZBAA,Asia,Arrivals,Beijing,438,14.06
+Chhatrapati Shivaji International Airport,19.08869934,72.86789703,India,VABB,Asia,Arrivals,Mumbai,437,9.87
+Los Angeles International Airport,33.94250107,-118.4079971,United States,KLAX,America,Arrivals,Los Angeles,433,24.3
+Brindisi – Salento Airport,40.6576,17.947001,Italy,LIBR,Europe,Arrivals,Brindisi,427,6.87
+Indira Gandhi International Airport,28.56649971,77.10310364,India,VIDP,Asia,Arrivals,Delhi,417,12.99
+Shanghai Pudong International Airport,31.14340019,121.8050003,China,ZSPD,Asia,Arrivals,Shanghai,412,17.39
+Catania-Fontanarossa Airport,37.466801,15.0664,Italy,LICC,Europe,Arrivals,Catania,399,9.68
+Pulkovo Airport,59.8003006,30.26250076,Russia,ULLI,Europe,Arrivals,St. Petersburg,384,6.63
+Keflavik International Airport,63.98500061,-22.60560036,Iceland,BIKF,Atlantic,Arrivals,Keflavik,365,20.65
+Philadelphia International Airport,39.87189865,-75.2410965,United States,KPHL,America,Arrivals,Philadelphia,365,10.23
+Split Airport,43.53889847,16.29800034,Croatia,LDSP,Europe,Arrivals,Split,364,10.27
+John Paul II International Airport Kraków-Balice Airport,50.07770157,19.78479958,Poland,EPKK,Europe,Arrivals,Krakow,363,11.86
+Adnan Menderes International Airport,38.29240036,27.15699959,Turkey,LTBJ,Europe,Arrivals,Izmir,360,15.4
+Graz Airport,46.99110031,15.43959999,Austria,LOWG,Europe,Arrivals,Graz,355,12.49
+Sofia Airport,42.69669342,23.41143608,Bulgaria,LBSF,Europe,Arrivals,Sofia,348,12.12
+Jomo Kenyatta International Airport,-1.319239974,36.92779922,Kenya,HKJK,Africa,Arrivals,Nairobi,347,12.43
+Falcone–Borsellino Airport,38.175999,13.091,Italy,LICJ,Europe,Arrivals,Palermo,323,5.85
+Podgorica Airport,42.3594017,19.25189972,Montenegro,LYPG,Europe,Arrivals,Podgorica,294,11.84
+Diagoras Airport,36.40539932,28.08620071,Greece,LGRP,Europe,Arrivals,Rhodos,283,14.63
+Lanzarote Airport,28.94549942,-13.60519981,Spain,GCRR,Atlantic,Arrivals,Arrecife,264,13.43
+Ibiza Airport,38.8728981,1.37311995,Spain,LEIB,Europe,Arrivals,Ibiza,261,12.18
+Thessaloniki Macedonia International Airport,40.5196991,22.97089958,Greece,LGTS,Europe,Arrivals,Thessaloniki,254,9.3
+Olbia Costa Smeralda Airport,40.898701,9.51763,Italy,LIEO,Europe,Arrivals,Olbia,249,9.32
+Cairo International Airport,30.12190056,31.40559959,Egypt,HECA,Africa,Arrivals,Cairo,248,11.23
+Alicante International Airport,38.28219986,-0.558156013,Spain,LEAL,Europe,Arrivals,Alicante,243,14.74
+Kos Airport,36.79330063,27.0916996,Greece,LGKO,Europe,Arrivals,Kos,243,14.65
+Dubrovnik Airport,42.56140137,18.26819992,Croatia,LDDU,Europe,Arrivals,Dubrovnik,238,8.88
+Fuerteventura Airport,28.45269966,-13.86380005,Spain,GCFV,Atlantic,Arrivals,Fuerteventura,237,6.81
+Lamezia Terme Airport,38.905399,16.2423,Italy,LICA,Europe,Arrivals,Lamezia,233,7.6
+Marsa Alam International Airport,25.5571003,34.58369827,Egypt,HEMA,Africa,Arrivals,Marsa Alam,226,8.97
+Punta Cana International Airport,18.56739998,-68.36340332,Dominican Republic,MDPC,America,Arrivals,Punta Cana,218,24.74
+Copernicus Wrocław Airport,51.10269928,16.88579941,Poland,EPWR,Europe,Arrivals,Wroclaw,210,13.9
+Leipzig Halle Airport,51.4238889,12.2363889,Germany,EDDP,Europe,Arrivals,Leipzig,209,10.03
+Edinburgh Airport,55.95000076,-3.372499943,United Kingdom,EGPH,Europe,Arrivals,Edinburgh,199,12.1
+Cancún International Airport,21.03650093,-86.87709808,Mexico,MMUN,America,Arrivals,Cancun,195,18.59
+Menara Airport,31.60689926,-8.036299706,Morocco,GMMX,Africa,Arrivals,Marrakech,187,10.05
+Bilbao Airport,43.30110168,-2.910609961,Spain,LEBB,Europe,Arrivals,Bilbao,187,18.08
+Cape Town International Airport,-33.96480179,18.60169983,South Africa,FACT,Africa,Arrivals,Cape Town,179,11.52
+Ohrid St. Paul the Apostle Airport,41.18,20.7423,Macedonia,LWOH,Europe,Arrivals,Ohrid,175,13.77
+Madeira Airport,32.69789886,-16.77449989,Portugal,LPMA,Europe,Arrivals,Funchal,174,6.77
+Juan Santamaria International Airport,9.993860245,-84.20880127,Costa Rica,MROC,America,Arrivals,San Jose,172,20.02
+Faro Airport,37.01440048,-7.965909958,Portugal,LPFR,Europe,Arrivals,Faro,164,3.28
+Cagliari Elmas Airport,39.251499,9.05428,Italy,LIEE,Europe,Arrivals,Cagliari,163,11.25
+Queen Alia International Airport,31.72260094,35.99319839,Jordan,OJAI,Asia,Arrivals,Amman,159,13.78
+Tunis Carthage International Airport,36.85100174,10.22719955,Tunisia,DTTA,Africa,Arrivals,Tunis,157,25.57
+Vancouver International Airport,49.19390106,-123.1839981,Canada,CYVR,America,Arrivals,Vancouver,157,17.04
+Westerland Sylt Airport,54.91320038,8.340470314,Germany,EDXW,Europe,Arrivals,Westerland,156,8.48
+Mikonos Airport,37.43510056,25.34810066,Greece,LGMK,Europe,Arrivals,Mykonos,155,9.45
+Sevilla Airport,37.41799927,-5.893109798,Spain,LEZL,Europe,Arrivals,Sevilla,148,7.8
+Santiago de Compostela Airport,42.89630127,-8.415140152,Spain,LEST,Europe,Arrivals,Santiago,148,7.23
+Djerba Zarzis International Airport,33.875,10.7755003,Tunisia,DTTJ,Africa,Arrivals,Djerba,147,19.38
+Mohammed V International Airport,33.36750031,-7.589970112,Morocco,GMMN,Africa,Arrivals,Casablanca,145,15.06
+Incheon International Airport,37.46910095,126.4509964,South Korea,RKSI,Asia,Arrivals,Seoul,143,6.06
+Santorini Airport,36.39920044,25.47929955,Greece,LGSR,Europe,Arrivals,Thira,139,8.5
+Sir Seewoosagur Ramgoolam International Airport,-20.43020058,57.68360138,Mauritius,FIMP,Indian,Arrivals,Plaisance,138,19.12
+José Martí International Airport,22.98920059,-82.40910339,Cuba,MUHA,America,Arrivals,Havana,130,22.67
+Ministro Pistarini International Airport,-34.8222,-58.5358,Argentina,SAEZ,America,Arrivals,Buenos Aires,126,13.68
+Rio Galeão – Tom Jobim International Airport,-22.80999947,-43.25055695,Brazil,SBGL,America,Arrivals,Rio De Janeiro,120,18.25
+Bari Karol Wojtyła Airport,41.138901,16.760599,Italy,LIBD,Europe,Arrivals,Bari,119,14.07
+Hartsfield Jackson Atlanta International Airport,33.63669968,-84.42810059,United States,KATL,America,Arrivals,Atlanta,118,15.39
+Beirut Rafic Hariri International Airport,33.82089996,35.48839951,Lebanon,OLBA,Asia,Arrivals,Beirut,117,9.58
+Gdańsk Lech Wałęsa Airport,54.37760162,18.46619987,Poland,EPGD,Europe,Arrivals,Gdansk,115,13.35
+Shenzhen Bao'an International Airport,22.63929939,113.810997,China,ZGSZ,Asia,Arrivals,Shenzhen,115,3.86
+Nis Airport,43.337299,21.853701,Serbia,LYNI,Europe,Arrivals,Nis,114,16.52
+Malé International Airport,4.191830158,73.52909851,Maldives,VRMM,Indian,Arrivals,Male,113,9.96
+Phuket International Airport,8.113200188,98.31690216,Thailand,VTSP,Asia,Arrivals,Phuket,111,18.88
+Marseille Provence Airport,43.43927192,5.221424103,France,LFML,Europe,Arrivals,Marseille,110,14.85
+Cork Airport,51.84130096,-8.491109848,Ireland,EICK,Europe,Arrivals,Cork,110,9.25
+Ioannis Kapodistrias International Airport,39.60189819,19.9116993,Greece,LGKR,Europe,Arrivals,Kerkyra/corfu,109,13.2
+Sharm El Sheikh International Airport,27.97730064,34.39500046,Egypt,HESH,Africa,Arrivals,Sharm El Sheikh,98,12.85
+McCarran International Airport,36.08010101,-115.1520004,United States,KLAS,America,Arrivals,Las Vegas,91,19.08
+Kittilä Airport,67.7009964,24.84679985,Finland,EFKT,Europe,Arrivals,Kittila,84,17.89
+Zürich Airport,47.46469879,8.54916954,Switzerland,LSZH,Europe,Arrivals,Zurich,82,3.51
+Tampa International Airport,27.97550011,-82.53320313,United States,KTPA,America,Arrivals,Tampa,82,20.55
+Dionysios Solomos Airport,37.75090027,20.88430023,Greece,LGZA,Europe,Arrivals,Zakynthos,80,6.54
+Bandaranaike International Colombo Airport,7.180759907,79.88410187,Sri Lanka,VCBI,Asia,Arrivals,Colombo,79,14.53
+La Palma Airport,28.62649918,-17.75559998,Spain,GCLA,Atlantic,Arrivals,Santa Cruz De La Palma,76,3.4
+Tirana International Airport Mother Teresa,41.41469955,19.72060013,Albania,LATI,Europe,Arrivals,Tirana,76,9.28
+Seychelles International Airport,-4.674339771,55.52180099,Seychelles,FSIA,Indian,Arrivals,Mahe,70,7.45
+Chengdu Shuangliu International Airport,30.57850075,103.9469986,China,ZUUU,Asia,Arrivals,Chengdu,68,5.73
+Chania International Airport,35.53170013,24.14970016,Greece,LGSA,Europe,Arrivals,Chania,67,2.2
+Tan Son Nhat International Airport,10.81879997,106.6520004,Vietnam,VVTS,Asia,Arrivals,Ho Chi Minh City,63,25.65
+Sarajevo International Airport,43.82460022,18.3314991,Bosnia and Herzegovina,LQSA,Europe,Arrivals,Sarajevo,60,20.08
+Milas Bodrum International Airport,37.25059891,27.66430092,Turkey,LTFE,Europe,Arrivals,Bodrum,50,4.8
+Pula Airport,44.89350128,13.9222002,Croatia,LDPL,Europe,Arrivals,Pula,49,11.29
+Paphos International Airport,34.7179985,32.4856987,Cyprus,LCPH,Asia,Arrivals,Paphos,46,5.31
+Paderborn Lippstadt Airport,51.61410141,8.616319656,Germany,EDLP,Europe,Arrivals,Paderborn,45,9.73
+Tromsø Airport,69.6832962,18.91889954,Norway,ENTC,Europe,Arrivals,Tromso,43,7.75
+Figari Sud-Corse Airport,41.50059891,9.097780228,France,LFKF,Europe,Arrivals,Figari,42,19.76
+Samos Airport,37.68999863,26.9116993,Greece,LGSM,Europe,Arrivals,Samos,41,5.96
+Orlando International Airport,28.42939949,-81.30899811,United States,KMCO,America,Arrivals,Orlando,39,13.94
+Kalamata Airport,37.06829834,22.02549934,Greece,LGKL,Europe,Arrivals,Kalamata,38,1.46
+Gaziantep International Airport,36.94720078,37.47869873,Turkey,LTAJ,Europe,Arrivals,Gaziantep,37,4.94
+Jerez Airport,36.74459839,-6.060110092,Spain,LEJR,Europe,Arrivals,Jerez,35,6.25
+Dalaman International Airport,36.71310043,28.79249954,Turkey,LTBS,Europe,Arrivals,Dalaman,33,0.15
+Juan Gualberto Gomez International Airport,23.03440094,-81.43530273,Cuba,MUVR,America,Arrivals,Varadero,30,15.65
+Denver International Airport,39.86169815,-104.6729965,United States,KDEN,America,Arrivals,Denver,29,24.45
+Esenboğa International Airport,40.12810135,32.99509811,Turkey,LTAC,Europe,Arrivals,Ankara,27,24.22
+Calgary International Airport,51.11389923,-114.0199966,Canada,CYYC,America,Arrivals,Calgary,27,28.11
+Berlin-Tegel International Airport,52.55970001,13.2876997,Germany,EDDT,Europe,Departures,Berlin,6206,9.47
+London Heathrow Airport,51.4706,-0.461941,United Kingdom,EGLL,Europe,Departures,London,6175,5.03
+Amsterdam Airport Schiphol,52.30860138,4.76388979,Netherlands,EHAM,Europe,Departures,Amsterdam,5341,6.36
+Vienna International Airport,48.11029816,16.56970024,Austria,LOWW,Europe,Departures,Vienna,5271,5.29
+Frankfurt am Main International Airport,50.0333333,8.5705556,Germany,EDDF,Europe,Departures,Frankfurt,4985,7.31
+Düsseldorf International Airport,51.28950119,6.7667799,Germany,EDDL,Europe,Departures,Duesseldorf,4878,3.41
+Hamburg Airport,53.63040161,9.988229752,Germany,EDDH,Europe,Departures,Hamburg,4041,5.42
+Adolfo Suárez Madrid–Barajas Airport,40.471926,-3.56264,Spain,LEMD,Europe,Departures,Madrid,4011,4.93
+Charles de Gaulle International Airport,49.01279831,2.549999952,France,LFPG,Europe,Departures,Paris,3995,5.39
+Geneva Cointrin International Airport,46.23809814,6.108950138,Switzerland,LSGG,Europe,Departures,Geneva,3906,2.72
+Munich International Airport,48.35380173,11.78610039,Germany,EDDM,Europe,Departures,Munich,3762,3.05
+London City Airport,51.505299,0.055278,United Kingdom,EGLC,Europe,Departures,London,3443,7.63
+Copenhagen Kastrup Airport,55.61790085,12.65600014,Denmark,EKCH,Europe,Departures,Copenhagen,2633,3.48
+Barcelona International Airport,41.29710007,2.078459978,Spain,LEBL,Europe,Departures,Barcelona,2560,8.65
+Belgrade Nikola Tesla Airport,44.81840134,20.3090992,Serbia,LYBE,Europe,Departures,Belgrade,2511,6.39
+Lisbon Portela Airport,38.78129959,-9.135919571,Portugal,LPPT,Europe,Departures,Lisbon,2483,9.59
+Leonardo da Vinci–Fiumicino Airport,41.8002778,12.2388889,Italy,LIRF,Europe,Departures,Rome,2442,5.82
+Warsaw Chopin Airport,52.16569901,20.96710014,Poland,EPWA,Europe,Departures,Warsaw,2307,7.93
+Stockholm-Arlanda Airport,59.65190125,17.91860008,Sweden,ESSA,Europe,Departures,Stockholm,2245,10.08
+Eleftherios Venizelos International Airport,37.93640137,23.94449997,Greece,LGAV,Europe,Departures,Athens,2204,7.58
+Brussels Airport,50.90140152,4.48443985,Belgium,EBBR,Europe,Departures,Brussels,2100,7.1
+Palma De Mallorca Airport,39.55170059,2.738810062,Spain,LEPA,Europe,Departures,Palma de Mallorca,2026,7.75
+Priština International Airport,42.5728,21.035801,Serbia,BKPR,Europe,Departures,Pristina,1942,5.38
+Stuttgart Airport,48.68989944,9.221960068,Germany,EDDS,Europe,Departures,Stuttgart,1937,2.13
+Francisco de Sá Carneiro Airport,41.24810028,-8.681389809,Portugal,LPPR,Europe,Departures,Porto,1843,6.9
+Atatürk International Airport,40.97689819,28.81459999,Turkey,LTBA,Europe,Departures,Istanbul,1810,4.81
+Malpensa International Airport,45.6306,8.72811,Italy,LIMC,Europe,Departures,Milano,1742,5.04
+Cologne Bonn Airport,50.86589813,7.142739773,Germany,EDDK,Europe,Departures,Cologne,1660,0.29
+Nice-Côte d'Azur Airport,43.65840149,7.215869904,France,LFMN,Europe,Departures,Nice,1629,6.84
+Ben Gurion International Airport,32.01139832,34.88669968,Israel,LLBG,Asia,Departures,Tel-aviv,1549,7.74
+Hannover Airport,52.46110153,9.685079575,Germany,EDDV,Europe,Departures,Hannover,1502,3.24
+Antalya International Airport,36.898701,30.800501,Turkey,LTAI,Europe,Departures,Antalya,1442,6.77
+John F Kennedy International Airport,40.63980103,-73.77890015,United States,KJFK,America,Departures,New York,1432,-15.26
+Nuremberg Airport,49.498699,11.0780556,Germany,EDDN,Europe,Departures,Nuernberg,1405,0.1
+Venice Marco Polo Airport,45.505299,12.3519,Italy,LIPZ,Europe,Departures,Venice,1395,5.03
+Václav Havel Airport Prague,50.1008,14.26,Czech Republic,LKPR,Europe,Departures,Prague,1360,3.43
+Dublin Airport,53.42129898,-6.270070076,Ireland,EIDW,Europe,Departures,Dublin,1348,7.44
+Budapest Ferenc Liszt International Airport,47.43690109,19.25559998,Hungary,LHBP,Europe,Departures,Budapest,1330,9.2
+Peretola Airport,43.810001,11.2051,Italy,LIRQ,Europe,Departures,Florence,1327,4.66
+Zagreb Airport,45.74290085,16.06879997,Croatia,LDZA,Europe,Departures,Zagreb,1159,4.42
+Luxembourg-Findel International Airport,49.6233333,6.2044444,Luxembourg,ELLX,Europe,Departures,Luxemburg,1153,4.32
+Doha International Airport,25.26110077,51.56510162,Qatar,OTBD,Asia,Departures,Doha,1147,0.52
+Málaga Airport,36.67490005,-4.499110222,Spain,LEMG,Europe,Departures,Malaga,1139,6.23
+Helsinki Vantaa Airport,60.31719971,24.9633007,Finland,EFHK,Europe,Departures,Helsinki,1124,3.05
+Singapore Changi Airport,1.35019,103.994003,Singapore,WSSS,Asia,Departures,Singapore,1095,7.14
+Valencia Airport,39.48929977,-0.481624991,Spain,LEVC,Europe,Departures,Valencia,1076,6.78
+Dubai International Airport,25.25279999,55.36439896,United Arab Emirates,OMDB,Asia,Departures,Dubai,1076,1.36
+Newark Liberty International Airport,40.69250107,-74.16870117,United States,KEWR,America,Departures,Newark,1032,1.45
+Oslo Gardermoen Airport,60.19390106,11.10039997,Norway,ENGM,Europe,Departures,Oslo,1007,7.58
+Lugano Airport,46.00429916,8.910579681,Switzerland,LSZA,Europe,Departures,Lugano,990,-3.19
+Manchester Airport,53.35369873,-2.274950027,United Kingdom,EGCC,Europe,Departures,Manchester,952,13.13
+Suvarnabhumi Airport,13.68109989,100.7470016,Thailand,VTBS,Asia,Departures,Bangkok,947,0.43
+Chek Lap Kok International Airport,22.30890083,113.9150009,Hong Kong,VHHH,Asia,Departures,Hong Kong,936,6.78
+Domodedovo International Airport,55.40879822,37.90629959,Russia,UUDD,Europe,Departures,Moscow,911,2.62
+Sheremetyevo International Airport,55.972599,37.4146,Russia,UUEE,Europe,Departures,Moscow,888,-0.76
+Muscat International Airport,23.59329987,58.28440094,Oman,OOMS,Asia,Departures,Muscat,868,6.63
+Hurghada International Airport,27.17830086,33.79940033,Egypt,HEGN,Africa,Departures,Hurghada,848,2.26
+Sabiha Gökçen International Airport,40.89860153,29.30920029,Turkey,LTFJ,Europe,Departures,Istanbul,825,1.16
+Boryspil International Airport,50.34500122,30.8946991,Ukraine,UKBB,Europe,Departures,Kiev,822,6.17
+Ljubljana Jože Pučnik Airport,46.223701,14.4576,Slovenia,LJLJ,Europe,Departures,Ljubljana,819,7.74
+Birmingham International Airport,52.45389938,-1.748029947,United Kingdom,EGBB,Europe,Departures,Birmingham,754,6.36
+Skopje Alexander the Great Airport,41.961601,21.621401,Macedonia,LWSK,Europe,Departures,Skopje,739,-1.26
+Dresden Airport,51.13280106,13.76720047,Germany,EDDC,Europe,Departures,Dresden,716,4.12
+Miami International Airport,25.79319954,-80.29060364,United States,KMIA,America,Departures,Miami,711,-7.04
+London Luton Airport,51.87469864,-0.368333012,United Kingdom,EGGW,Europe,Departures,London,705,7.56
+London Gatwick Airport,51.14810181,-0.190277994,United Kingdom,EGKK,Europe,Departures,London,698,7.2
+Bremen Airport,53.04750061,8.786669731,Germany,EDDW,Europe,Departures,Bremen,678,0.98
+Riga International Airport,56.92359924,23.97109985,Latvia,EVRA,Europe,Departures,Riga,664,2.19
+San Francisco International Airport,37.61899948,-122.375,United States,KSFO,America,Departures,San Francisco,649,2.16
+Chicago O'Hare International Airport,41.97859955,-87.90480042,United States,KORD,America,Departures,Chicago,638,-8.47
+Larnaca International Airport,34.87509918,33.62490082,Cyprus,LCLK,Asia,Departures,Larnaca,622,2.76
+Bordeaux-Mérignac Airport,44.82830048,-0.715556026,France,LFBD,Europe,Departures,Bordeaux,622,2.73
+Malta International Airport,35.857498,14.4775,Malta,LMML,Europe,Departures,Malta,609,7.69
+Gothenburg-Landvetter Airport,57.66279984,12.27980042,Sweden,ESGG,Europe,Departures,Gothenborg,592,8.21
+Naples International Airport,40.886002,14.2908,Italy,LIRN,Europe,Departures,Naples,589,4.07
+Washington Dulles International Airport,38.94449997,-77.45580292,United States,KIAD,America,Departures,Washington,588,-3.75
+General Edward Lawrence Logan International Airport,42.36429977,-71.00520325,United States,KBOS,America,Departures,Boston,582,-2.37
+Henri Coandă International Airport,44.5711111,26.085,Romania,LROP,Europe,Departures,Bucharest,581,11.29
+Lester B. Pearson International Airport,43.67720032,-79.63059998,Canada,CYYZ,America,Departures,Toronto,573,9.95
+Abu Dhabi International Airport,24.43300056,54.65110016,United Arab Emirates,OMAA,Asia,Departures,Abu Dhabi,568,2.43
+Gran Canaria Airport,27.93190002,-15.38659954,Spain,GCLP,Atlantic,Departures,Gran Canaria,563,1.62
+Heraklion International Nikos Kazantzakis Airport,35.33969879,25.18029976,Greece,LGIR,Europe,Departures,Heraklion,553,0.69
+Tenerife South Airport,28.04450035,-16.57250023,Spain,GCTS,Atlantic,Departures,Tenerife,541,-2.24
+Guarulhos - Governador André Franco Montoro International Airport,-23.43555641,-46.47305679,Brazil,SBGR,America,Departures,Sao Paulo,532,-0.96
+Narita International Airport,35.76470184,140.3860016,Japan,RJAA,Asia,Departures,Tokyo,505,0.29
+Lyon Saint-Exupéry Airport,45.7255556,5.0811111,France,LFLL,Europe,Departures,Lyon,472,3.57
+Montreal / Pierre Elliott Trudeau International Airport,45.47060013,-73.74079895,Canada,CYUL,America,Departures,Montreal,471,5.55
+OR Tambo International Airport,-26.1392,28.246,South Africa,FAJS,Africa,Departures,Johannesburg,465,7.35
+Beijing Capital International Airport,40.08010101,116.5849991,China,ZBAA,Asia,Departures,Beijing,438,2.96
+Chhatrapati Shivaji International Airport,19.08869934,72.86789703,India,VABB,Asia,Departures,Mumbai,437,4.91
+Los Angeles International Airport,33.94250107,-118.4079971,United States,KLAX,America,Departures,Los Angeles,434,-1.23
+Brindisi – Salento Airport,40.6576,17.947001,Italy,LIBR,Europe,Departures,Brindisi,426,-1.21
+Indira Gandhi International Airport,28.56649971,77.10310364,India,VIDP,Asia,Departures,Delhi,417,59.23
+Shanghai Pudong International Airport,31.14340019,121.8050003,China,ZSPD,Asia,Departures,Shanghai,410,-5.36
+Catania-Fontanarossa Airport,37.466801,15.0664,Italy,LICC,Europe,Departures,Catania,398,10.61
+Pulkovo Airport,59.8003006,30.26250076,Russia,ULLI,Europe,Departures,St. Petersburg,384,5.52
+John Paul II International Airport Kraków-Balice Airport,50.07770157,19.78479958,Poland,EPKK,Europe,Departures,Krakow,369,11.4
+Keflavik International Airport,63.98500061,-22.60560036,Iceland,BIKF,Atlantic,Departures,Keflavik,365,9.09
+Philadelphia International Airport,39.87189865,-75.2410965,United States,KPHL,America,Departures,Philadelphia,365,-3.89
+Split Airport,43.53889847,16.29800034,Croatia,LDSP,Europe,Departures,Split,364,2.92
+Graz Airport,46.99110031,15.43959999,Austria,LOWG,Europe,Departures,Graz,357,1.64
+Adnan Menderes International Airport,38.29240036,27.15699959,Turkey,LTBJ,Europe,Departures,Izmir,356,0.17
+Julius Nyerere International Airport,-6.878109932,39.20259857,Tanzania,HTDA,Africa,Departures,Dar Es Salaam,353,3.49
+Sofia Airport,42.69669342,23.41143608,Bulgaria,LBSF,Europe,Departures,Sofia,350,3.49
+Falcone–Borsellino Airport,38.175999,13.091,Italy,LICJ,Europe,Departures,Palermo,324,2.07
+Podgorica Airport,42.3594017,19.25189972,Montenegro,LYPG,Europe,Departures,Podgorica,295,1.3
+Diagoras Airport,36.40539932,28.08620071,Greece,LGRP,Europe,Departures,Rhodos,280,7.31
+Ibiza Airport,38.8728981,1.37311995,Spain,LEIB,Europe,Departures,Ibiza,262,2.53
+Lanzarote Airport,28.94549942,-13.60519981,Spain,GCRR,Atlantic,Departures,Arrecife,258,6.27
+Thessaloniki Macedonia International Airport,40.5196991,22.97089958,Greece,LGTS,Europe,Departures,Thessaloniki,253,4.33
+Cairo International Airport,30.12190056,31.40559959,Egypt,HECA,Africa,Departures,Cairo,248,10.65
+Olbia Costa Smeralda Airport,40.898701,9.51763,Italy,LIEO,Europe,Departures,Olbia,247,3.32
+Kos Airport,36.79330063,27.0916996,Greece,LGKO,Europe,Departures,Kos,244,5.08
+Fuerteventura Airport,28.45269966,-13.86380005,Spain,GCFV,Atlantic,Departures,Fuerteventura,244,-0.5
+Alicante International Airport,38.28219986,-0.558156013,Spain,LEAL,Europe,Departures,Alicante,244,6.37
+Dubrovnik Airport,42.56140137,18.26819992,Croatia,LDDU,Europe,Departures,Dubrovnik,237,1.26
+Lamezia Terme Airport,38.905399,16.2423,Italy,LICA,Europe,Departures,Lamezia,234,-1.2
+Marsa Alam International Airport,25.5571003,34.58369827,Egypt,HEMA,Africa,Departures,Marsa Alam,224,-8.23
+Copernicus Wrocław Airport,51.10269928,16.88579941,Poland,EPWR,Europe,Departures,Wroclaw,212,-0.49
+Punta Cana International Airport,18.56739998,-68.36340332,Dominican Republic,MDPC,America,Departures,Punta Cana,211,-0.77
+Leipzig Halle Airport,51.4238889,12.2363889,Germany,EDDP,Europe,Departures,Leipzig,209,6.84
+Edinburgh Airport,55.95000076,-3.372499943,United Kingdom,EGPH,Europe,Departures,Edinburgh,198,3.95
+Cancún International Airport,21.03650093,-86.87709808,Mexico,MMUN,America,Departures,Cancun,196,5.94
+Bilbao Airport,43.30110168,-2.910609961,Spain,LEBB,Europe,Departures,Bilbao,189,7.03
+Ohrid St. Paul the Apostle Airport,41.18,20.7423,Macedonia,LWOH,Europe,Departures,Ohrid,182,-1.97
+Menara Airport,31.60689926,-8.036299706,Morocco,GMMX,Africa,Departures,Marrakech,182,7.72
+Cape Town International Airport,-33.96480179,18.60169983,South Africa,FACT,Africa,Departures,Cape Town,178,2.85
+Madeira Airport,32.69789886,-16.77449989,Portugal,LPMA,Europe,Departures,Funchal,174,-1.29
+Juan Santamaria International Airport,9.993860245,-84.20880127,Costa Rica,MROC,America,Departures,San Jose,170,-0.47
+Faro Airport,37.01440048,-7.965909958,Portugal,LPFR,Europe,Departures,Faro,162,-3.22
+Cagliari Elmas Airport,39.251499,9.05428,Italy,LIEE,Europe,Departures,Cagliari,162,7.96
+Queen Alia International Airport,31.72260094,35.99319839,Jordan,OJAI,Asia,Departures,Amman,159,11.99
+Tunis Carthage International Airport,36.85100174,10.22719955,Tunisia,DTTA,Africa,Departures,Tunis,159,24.98
+Vancouver International Airport,49.19390106,-123.1839981,Canada,CYVR,America,Departures,Vancouver,158,2.21
+Westerland Sylt Airport,54.91320038,8.340470314,Germany,EDXW,Europe,Departures,Westerland,156,7.73
+Mikonos Airport,37.43510056,25.34810066,Greece,LGMK,Europe,Departures,Mykonos,156,0.16
+Santiago de Compostela Airport,42.89630127,-8.415140152,Spain,LEST,Europe,Departures,Santiago,151,2.37
+Sevilla Airport,37.41799927,-5.893109798,Spain,LEZL,Europe,Departures,Sevilla,149,3.55
+Djerba Zarzis International Airport,33.875,10.7755003,Tunisia,DTTJ,Africa,Departures,Djerba,145,15.56
+Mohammed V International Airport,33.36750031,-7.589970112,Morocco,GMMN,Africa,Departures,Casablanca,143,4.87
+Incheon International Airport,37.46910095,126.4509964,South Korea,RKSI,Asia,Departures,Seoul,143,-3.78
+Santorini Airport,36.39920044,25.47929955,Greece,LGSR,Europe,Departures,Thira,140,0.09
+Sir Seewoosagur Ramgoolam International Airport,-20.43020058,57.68360138,Mauritius,FIMP,Indian,Departures,Plaisance,135,-9.57
+José Martí International Airport,22.98920059,-82.40910339,Cuba,MUHA,America,Departures,Havana,130,8.72
+Ministro Pistarini International Airport,-34.8222,-58.5358,Argentina,SAEZ,America,Departures,Buenos Aires,127,10.12
+Bari Karol Wojtyła Airport,41.138901,16.760599,Italy,LIBD,Europe,Departures,Bari,120,1.68
+Rio Galeão – Tom Jobim International Airport,-22.80999947,-43.25055695,Brazil,SBGL,America,Departures,Rio De Janeiro,120,12.02
+Hartsfield Jackson Atlanta International Airport,33.63669968,-84.42810059,United States,KATL,America,Departures,Atlanta,118,-1.89
+Beirut Rafic Hariri International Airport,33.82089996,35.48839951,Lebanon,OLBA,Asia,Departures,Beirut,117,2.59
+Nis Airport,43.337299,21.853701,Serbia,LYNI,Europe,Departures,Nis,115,11.98
+Gdańsk Lech Wałęsa Airport,54.37760162,18.46619987,Poland,EPGD,Europe,Departures,Gdansk,115,11.62
+Shenzhen Bao'an International Airport,22.63929939,113.810997,China,ZGSZ,Asia,Departures,Shenzhen,114,9.04
+Malé International Airport,4.191830158,73.52909851,Maldives,VRMM,Indian,Departures,Male,112,27.42
+Cork Airport,51.84130096,-8.491109848,Ireland,EICK,Europe,Departures,Cork,111,-0.28
+Marseille Provence Airport,43.43927192,5.221424103,France,LFML,Europe,Departures,Marseille,110,-14.93
+Ioannis Kapodistrias International Airport,39.60189819,19.9116993,Greece,LGKR,Europe,Departures,Kerkyra/corfu,109,11.8
+Phuket International Airport,8.113200188,98.31690216,Thailand,VTSP,Asia,Departures,Phuket,109,11.32
+Sharm El Sheikh International Airport,27.97730064,34.39500046,Egypt,HESH,Africa,Departures,Sharm El Sheikh,102,2.84
+McCarran International Airport,36.08010101,-115.1520004,United States,KLAS,America,Departures,Las Vegas,91,-6.77
+Kittilä Airport,67.7009964,24.84679985,Finland,EFKT,Europe,Departures,Kittila,84,19.83
+Tampa International Airport,27.97550011,-82.53320313,United States,KTPA,America,Departures,Tampa,82,4.35
+Dionysios Solomos Airport,37.75090027,20.88430023,Greece,LGZA,Europe,Departures,Zakynthos,81,0.59
+La Palma Airport,28.62649918,-17.75559998,Spain,GCLA,Atlantic,Departures,Santa Cruz De La Palma,78,-3.8
+Tirana International Airport Mother Teresa,41.41469955,19.72060013,Albania,LATI,Europe,Departures,Tirana,77,2.69
+Bandaranaike International Colombo Airport,7.180759907,79.88410187,Sri Lanka,VCBI,Asia,Departures,Colombo,76,-8.29
+Seychelles International Airport,-4.674339771,55.52180099,Seychelles,FSIA,Indian,Departures,Mahe,71,-9.76
+Chengdu Shuangliu International Airport,30.57850075,103.9469986,China,ZUUU,Asia,Departures,Chengdu,68,-4.1
+Chania International Airport,35.53170013,24.14970016,Greece,LGSA,Europe,Departures,Chania,66,-3.92
+Tan Son Nhat International Airport,10.81879997,106.6520004,Vietnam,VVTS,Asia,Departures,Ho Chi Minh City,62,24.02
+Sarajevo International Airport,43.82460022,18.3314991,Bosnia and Herzegovina,LQSA,Europe,Departures,Sarajevo,61,20.73
+Milas Bodrum International Airport,37.25059891,27.66430092,Turkey,LTFE,Europe,Departures,Bodrum,50,-1.39
+Pula Airport,44.89350128,13.9222002,Croatia,LDPL,Europe,Departures,Pula,50,1.27
+Paphos International Airport,34.7179985,32.4856987,Cyprus,LCPH,Asia,Departures,Paphos,46,-5.28
+Paderborn Lippstadt Airport,51.61410141,8.616319656,Germany,EDLP,Europe,Departures,Paderborn,45,9.58
+Tromsø Airport,69.6832962,18.91889954,Norway,ENTC,Europe,Departures,Tromso,43,-1.92
+Figari Sud-Corse Airport,41.50059891,9.097780228,France,LFKF,Europe,Departures,Figari,42,18.51
+Samos Airport,37.68999863,26.9116993,Greece,LGSM,Europe,Departures,Samos,41,-1.8
+Orlando International Airport,28.42939949,-81.30899811,United States,KMCO,America,Departures,Orlando,39,6.44
+Gaziantep International Airport,36.94720078,37.47869873,Turkey,LTAJ,Europe,Departures,Gaziantep,38,7.16
+Kalamata Airport,37.06829834,22.02549934,Greece,LGKL,Europe,Departures,Kalamata,38,4.52
+Jerez Airport,36.74459839,-6.060110092,Spain,LEJR,Europe,Departures,Jerez,35,-4.47
+Dalaman International Airport,36.71310043,28.79249954,Turkey,LTBS,Europe,Departures,Dalaman,33,-2.75
+Juan Gualberto Gomez International Airport,23.03440094,-81.43530273,Cuba,MUVR,America,Departures,Varadero,30,18.41
+Denver International Airport,39.86169815,-104.6729965,United States,KDEN,America,Departures,Denver,29,26.72
+Esenboğa International Airport,40.12810135,32.99509811,Turkey,LTAC,Europe,Departures,Ankara,29,-2.68
+Calgary International Airport,51.11389923,-114.0199966,Canada,CYYC,America,Departures,Calgary,27,22.21
