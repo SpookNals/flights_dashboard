@@ -1,2 +1,0 @@
-# flights_dashboard
-schoolproject
