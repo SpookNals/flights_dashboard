@@ -163,17 +163,25 @@ with tab3:
     selected_option = st.selectbox("Select a flight", flight_options)
 
     color_map = {
-    'Flight 1': 'blue',
-    'Flight 2': 'orange',
-    'Flight 3': 'green',
-    'Flight 4': 'red',
-    'Flight 5': 'purple',
-    'Flight 6': 'brown',
-    'Flight 7': 'pink'
+        'Flight 1': 'blue',
+        'Flight 2': 'orange',
+        'Flight 3': 'green',
+        'Flight 4': 'red',
+        'Flight 5': 'purple',
+        'Flight 6': 'brown',
+        'Flight 7': 'pink'
     }
 
-    # Maak een subplot met 1 rij en 2 kolommen
-    fig = make_subplots(rows=1, cols=2, subplot_titles=('Altitude and Time of the Flight(s)', 'Airspeed and Time of the Flight(s)'))
+    # Maak een subplot met 1 rij en 3 kolommen
+    fig = make_subplots(
+        rows=1, cols=3, 
+        subplot_titles=(
+            'Altitude and Time of the Flight(s)', 
+            'Airspeed and Time of the Flight(s)',
+            'Combined Altitude and Airspeed'
+        ),
+        specs=[[{"secondary_y": False}, {"secondary_y": False}, {"secondary_y": True}]]  # Gebruik secondary_y voor de derde grafiek
+    )
 
     if selected_option == "All Flights":
         # Toon alle vluchten
@@ -182,15 +190,28 @@ with tab3:
             color = color_map.get(flight, 'gray')
 
             fig.add_trace(
-            go.Scatter(x=flight_data['Time (secs)'], y=flight_data['[3d Altitude M]'], 
-                       name=f'{flight}', mode='lines', legendgroup=f'{flight}', showlegend=True, line=dict(color=color)),
-            row=1, col=1
+                go.Scatter(x=flight_data['Time (secs)'], y=flight_data['[3d Altitude M]'], 
+                        name=f'{flight} Altitude', mode='lines', legendgroup=f'{flight}', showlegend=True, line=dict(color=color)),
+                row=1, col=1
             )
             fig.add_trace(
-            go.Scatter(x=flight_data['Time (secs)'], y=flight_data['SPEED (km/h)'], 
-                       name=f'{flight}', mode='lines', legendgroup=f'{flight}', showlegend=False, line=dict(color=color)),
-            row=1, col=2
+                go.Scatter(x=flight_data['Time (secs)'], y=flight_data['SPEED (km/h)'], 
+                        name=f'{flight} Airspeed', mode='lines', legendgroup=f'{flight}', showlegend=False, line=dict(color=color)),
+                row=1, col=2
             )
+            
+            # Voeg beide y-assen toe aan de derde kolom (altitude op primaire as, airspeed op secundaire as)
+            fig.add_trace(
+                go.Scatter(x=flight_data['Time (secs)'], y=flight_data['[3d Altitude M]'], 
+                        name=f'{flight} Altitude', mode='lines', legendgroup=f'{flight}', showlegend=False, line=dict(color=color)),
+                row=1, col=3, secondary_y=False  # Altitude op de primaire as
+            )
+            fig.add_trace(
+                go.Scatter(x=flight_data['Time (secs)'], y=flight_data['SPEED (km/h)'], 
+                        name=f'{flight} Airspeed', mode='lines', legendgroup=f'{flight}', showlegend=False, line=dict(dash='dash', color=color)),
+                row=1, col=3, secondary_y=True  # Airspeed op de secundaire as
+            )
+            
         title_text = "Flight Data Analysis - All Flights"
     else:
         # Toon alleen de geselecteerde vlucht
@@ -198,20 +219,33 @@ with tab3:
         color = color_map.get(selected_option, 'gray')  # Default to gray if flight not in color_map
         fig.add_trace(
             go.Scatter(x=flight_data['Time (secs)'], y=flight_data['[3d Altitude M]'], 
-                    name=f'{selected_option}', mode='lines', legendgroup=f'{selected_option}', showlegend=True, line=dict(color=color)),
+                    name=f'{selected_option} Altitude', mode='lines', legendgroup=f'{selected_option}', showlegend=True, line=dict(color=color)),
             row=1, col=1
         )
         fig.add_trace(
             go.Scatter(x=flight_data['Time (secs)'], y=flight_data['SPEED (km/h)'], 
-                    name=f'{selected_option}', mode='lines', legendgroup=f'{selected_option}', showlegend=False, line=dict(color=color)),
+                    name=f'{selected_option} Airspeed', mode='lines', legendgroup=f'{selected_option}', showlegend=False, line=dict(color=color)),
             row=1, col=2
         )
+        
+        # Voeg beide y-assen toe aan de derde kolom
+        fig.add_trace(
+            go.Scatter(x=flight_data['Time (secs)'], y=flight_data['[3d Altitude M]'], 
+                    name=f'{selected_option} Altitude', mode='lines', legendgroup=f'{selected_option}', showlegend=False, line=dict(color=color)),
+            row=1, col=3, secondary_y=False  # Altitude op de primaire as
+        )
+        fig.add_trace(
+            go.Scatter(x=flight_data['Time (secs)'], y=flight_data['SPEED (km/h)'], 
+                    name=f'{selected_option} Airspeed', mode='lines', legendgroup=f'{selected_option}', showlegend=False, line=dict(dash='dash', color=color)),
+            row=1, col=3, secondary_y=True  # Airspeed op de secundaire as
+        )
+        
         title_text = f"Flight Data Analysis - {selected_option}"
 
     # Update de layout
     fig.update_layout(
         height=800,  # Verhoog de hoogte om ruimte te maken voor de legenda
-        width=700, 
+        width=1100,  # Pas de breedte aan om ruimte te maken voor drie kolommen
         title_text=title_text,
         legend=dict(
             orientation="h",
@@ -226,10 +260,15 @@ with tab3:
     # Update x-assen
     fig.update_xaxes(title_text="Time (secs)", range=[x_min, x_max], row=1, col=1)
     fig.update_xaxes(title_text="Time (secs)", range=[x_min, x_max], row=1, col=2)
+    fig.update_xaxes(title_text="Time (secs)", range=[x_min, x_max], row=1, col=3)
 
     # Update y-assen
     fig.update_yaxes(title_text="Altitude (meters)", range=[0, altitude_max * 1.1], row=1, col=1)
     fig.update_yaxes(title_text="Airspeed (km/h)", range=[0, speed_max * 1.1], row=1, col=2)
+
+    # Voor de derde grafiek (gecombineerde y-assen)
+    fig.update_yaxes(title_text="Altitude (meters)", range=[0, altitude_max * 1.1], row=1, col=3, secondary_y=False)
+    fig.update_yaxes(title_text="Airspeed (km/h)", range=[0, speed_max * 1.1], row=1, col=3, secondary_y=True)
 
     # Toon de plot in Streamlit
     st.plotly_chart(fig, use_container_width=True)
@@ -555,54 +594,82 @@ airport_count_clean.to_csv('airport_count_CLEAN.csv', index=False)
     st.write('---')
     st.title("Flight Data Cleaning Process")
     cleaning_code = """
+# Als eerst heb ik op deze manier de data voorbewerkt. Het is namelijk zo dat in sommige kolommen een * stond voor het getal waardoor die niet gezien
+# werd als een float
+
+import pandas as pd
+import os
+
 folder = 'case3'
 files = os.listdir(folder)
+
+# Only keep the files that start with '30'
+files = [file for file in files if file.startswith('30')]
+
+# Add the files to the folder path
 list_with_paths = [os.path.join(folder, file) for file in files]
 
-vlucht1 = pd.read_excel(list_with_paths[7], dtype=str)
+# Initialize flight number and an empty list to store dataframes
+flight_number = 1
+all_flights_data = []
 
-# Verwijder sterretjes uit een specifieke kolom (vervang 'KolomNaam' met de juiste kolomnaam)
-vlucht1['[3d Altitude M]'] = vlucht1['[3d Altitude M]'].str.replace('*', '', regex=False)
+for path in list_with_paths:
+    vlucht = pd.read_excel(path, dtype=str)
 
-# Zet de kolom om naar een float (voor numerieke berekeningen)
-vlucht1['[3d Altitude M]'] = pd.to_numeric(vlucht1['[3d Altitude M]'], errors='coerce')
-vlucht1['TRUE AIRSPEED (derived)'] = pd.to_numeric(vlucht1['TRUE AIRSPEED (derived)'], errors='coerce')
-vlucht1['Time (secs)'] = pd.to_numeric(vlucht1['Time (secs)'], errors='coerce')
+    # Verwijder sterretjes uit een specifieke kolom
+    vlucht['[3d Altitude M]'] = vlucht['[3d Altitude M]'].str.replace('*', '', regex=False)
 
-# save the first and last row
-vlucht1_first_row = vlucht1.iloc[0]
-vlucht1_last_row = vlucht1.iloc[-1]
+    # Zet de kolom om naar een float voor numerieke berekeningen
+    vlucht['[3d Altitude M]'] = pd.to_numeric(vlucht['[3d Altitude M]'], errors='coerce')
+    vlucht['TRUE AIRSPEED (derived)'] = pd.to_numeric(vlucht['TRUE AIRSPEED (derived)'], errors='coerce')
+    vlucht['Time (secs)'] = pd.to_numeric(vlucht['Time (secs)'], errors='coerce')
 
-# drop the rows with altitude -1.2 and 6.4
-vlucht1 = vlucht1[vlucht1['[3d Altitude M]'] != -1.2]
-vlucht1 = vlucht1[vlucht1['[3d Altitude M]'] != 6.4]
+    # Pak het begin en eind van de vlucht
+    vlucht_start = vlucht[vlucht['[3d Altitude M]'] == -1.2]
+    vlucht_end = vlucht[vlucht['[3d Altitude M]'] == 6.4]
 
-# put the first row back in the beginnning of the dataframe
-vlucht1 = pd.concat([vlucht1_first_row.to_frame().T, vlucht1])
-# put the last row back in the end of the dataframe
-vlucht1 = pd.concat([vlucht1, vlucht1_last_row.to_frame().T])
-"""
-    st.code(cleaning_code, language='python')
-    cleaning_code = """
-# Combineer alle vluchtdata in één DataFrame
-all_flights = pd.concat([vlucht1, vlucht2, vlucht3, vlucht4, vlucht5, vlucht6, vlucht7], 
-                            keys=['Flight 1', 'Flight 2', 'Flight 3', 'Flight 4', 'Flight 5', 'Flight 6', 'Flight 7'])
-all_flights = all_flights.reset_index(level=0)
-all_flights = all_flights.rename(columns={'level_0': 'Flight'})
+    # Save the first and last row
+    vlucht_first_row = vlucht_start.iloc[-1]  # -1 because ascending is on the last row of the start
+    vlucht_last_row = vlucht_end.iloc[0]      # 0 because landing is on the first row of the end
 
-# if a row has non values, drop it
+    # Drop the rows with altitude -1.2 and 6.4
+    vlucht = vlucht[vlucht['[3d Altitude M]'] != -1.2]
+    vlucht = vlucht[vlucht['[3d Altitude M]'] != 6.4]
+
+    # Put the first row back at the beginning of the dataframe
+    vlucht = pd.concat([vlucht_first_row.to_frame().T, vlucht])
+    # Put the last row back at the end of the dataframe
+    vlucht = pd.concat([vlucht, vlucht_last_row.to_frame().T])
+
+    # Reset the index
+    vlucht.reset_index(drop=True, inplace=True)
+
+    # Add the flight number as a column (not index)
+    vlucht['Flight'] = f'Flight {flight_number}'
+
+    # Add the processed dataframe to the list
+    all_flights_data.append(vlucht)
+
+    # Increment flight number for the next iteration
+    flight_number += 1
+
+# Concatenate all flight dataframes into a single dataframe
+all_flights = pd.concat(all_flights_data, ignore_index=True)
+
+# Drop rows with missing values
 all_flights = all_flights.dropna()
 
-all_flights['TRUE AIRSPEED (derived)'] = all_flights['TRUE AIRSPEED (derived)'].astype(float)
-
-# change the values in column TRUE AIRSPEED (derived) from knopen to km/h
+# Change the values in column TRUE AIRSPEED (derived) from knots to km/h
 all_flights['TRUE AIRSPEED (derived)'] = (all_flights['TRUE AIRSPEED (derived)'] * 1.852).round(2)
-# rename the column TRUE AIRSPEED (derived) to SPEED (km/h)
+
+# Rename the column TRUE AIRSPEED (derived) to SPEED (km/h)
 all_flights = all_flights.rename(columns={'TRUE AIRSPEED (derived)': 'SPEED (km/h)'})
 
-# write to csv file
-all_flights.to_csv('all_flights.csv', index=False)
+# Set the 'Flight' column as the index
+all_flights.set_index('Flight', inplace=True)
 
+# Write to CSV
+all_flights.to_csv('all_flights.csv')
 """
     st.code(cleaning_code, language='python')
     cleaned_flight_data = pd.read_csv("all_flights.csv")
