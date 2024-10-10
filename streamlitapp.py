@@ -1122,4 +1122,4 @@ fig.write_html('residual_plot.html')
     )
 
     # show fig
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
