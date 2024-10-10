@@ -1032,9 +1032,8 @@ fig.write_html('residual_plot.html')
     import statsmodels.api as sm
     from sklearn.model_selection import train_test_split
 
-    df = pd.read_csv('airport_merge_CLEAN.csv')
             # Filter alleen Schiphol Airport
-    df = df[df['Name'].str.contains('Schiphol', case=False)]
+    df = df_merge[df_merge['Name'].str.contains('Schiphol', case=False)]
 
             # Zet de tijdkolommen om naar datetime
     df['STA_STD_ltc'] = pd.to_datetime(df['STA_STD_ltc'])
