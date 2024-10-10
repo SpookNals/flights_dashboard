@@ -194,7 +194,7 @@ with tab2:
     st.header("Airport Delay Analysis at Schiphol")
 
     # Create the scatter plot
-    fig = px.scatter(df_merge,
+    fig = px.scatter(df_LSV,
                     x='STA_STD_ltc',
                     y='delay_minutes',
                     color='Gate_Changed',
@@ -211,19 +211,14 @@ with tab2:
 
     st.write('---')
     st.header("Average delay by gate adjustments")
-
-    gate_df = df_merge.copy()
-
-    # Determine if the gate has changed
-    gate_df['adjusted_gate'] = gate_df['TAR'] != gate_df['GAT']
-
+    
     # Average delay for flights with and without gate changes
-    vertraging_met_gate_verandering = gate_df[gate_df['adjusted_gate']]['delay_minutes'].mean()
-    vertraging_zonder_gate_verandering = gate_df[~gate_df['adjusted_gate']]['delay_minutes'].mean()
+    vertraging_met_gate_verandering = df_LSV[df_LSV['Gate_Changed']]['delay_minutes'].mean()
+    vertraging_zonder_gate_verandering = df_LSV[~df_LSV['Gate_Changed']]['delay_minutes'].mean()
 
     # Number of flights with and without gate changes
-    aantal_met_gate_verandering = gate_df[gate_df['adjusted_gate']].shape[0]
-    aantal_zonder_gate_verandering = gate_df[~gate_df['adjusted_gate']].shape[0]
+    aantal_met_gate_verandering = df_LSV[df_LSV['Gate_Changed']].shape[0]
+    aantal_zonder_gate_verandering = df_LSV[~df_LSV['Gate_Changed']].shape[0]
 
     # Data for the chart
     labels = ['Met gate-verandering', 'Zonder gate-verandering']
@@ -261,8 +256,8 @@ with tab2:
 
     st.write('---')
     st.header("Top 10 Delays")
-    chosen_airport = st.selectbox("Selecteer een luchthaven", df_merge['Name'].unique())
-    df_name = df_merge[df_merge['Name'] == chosen_airport]
+    chosen_airport = st.selectbox("Selecteer een luchthaven", df_LSV['Name'].unique())
+    df_name = df_LSV[df_LSV['Name'] == chosen_airport]
     col1, col2 = st.columns(2)
 
     df_vertraging = df_name[df_name['delay_minutes'] > 0]
@@ -277,10 +272,10 @@ with tab2:
     gemiddelde_vertraging_per_act = gemiddelde_vertraging_per_act.sort_values(by='Gemiddelde vertraging (minuten)', ascending=False)
 
     # Selecteer de eerste 20 vliegtuigtypes met de hoogste gemiddelde vertraging
-    top_20_vertraging_per_act = gemiddelde_vertraging_per_act.head(10)
+    top_10_vertraging_per_act = gemiddelde_vertraging_per_act.head(10)
 
     # Plotten van de gemiddelde vertraging per vliegtuigtype (top 10) met Plotly, alleen vliegtuigtype
-    fig = px.bar(top_20_vertraging_per_act, 
+    fig = px.bar(top_10_vertraging_per_act, 
                 title='Top 10 Vliegtuigtypes met Hoogste Gemiddelde Vertraging',
                 x='Vliegtuigtype', 
                 y='Gemiddelde vertraging (minuten)', 
@@ -302,10 +297,10 @@ with tab2:
     gemiddelde_vertraging_per_gate = gemiddelde_vertraging_per_gate.sort_values(by='Gemiddelde vertraging (minuten)', ascending=False)
 
     # Select the top 10 gates with the highest average delay
-    top_20_vertraging_per_gate = gemiddelde_vertraging_per_gate.head(10)
+    top_10_vertraging_per_gate = gemiddelde_vertraging_per_gate.head(10)
 
     # Create a bar plot of average delay per gate (top 10) with Plotly
-    fig = px.bar(top_20_vertraging_per_gate, 
+    fig = px.bar(top_10_vertraging_per_gate, 
                  x='Gate', 
                  y='Gemiddelde vertraging (minuten)', 
                  title='Top 10 Gates met Hoogste Gemiddelde Vertraging',
