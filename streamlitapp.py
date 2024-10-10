@@ -829,14 +829,12 @@ airport_count_clean.to_csv('airport_count_CLEAN.csv', index=False)
     st.code(output_code, language='python')
 
     # **16. Final Cleaned Data**
-    df_cleaned_count = pd.read_csv("airport_count_CLEAN.csv")
-    df_cleaned_merge = pd.read_csv("airport_merge_CLEAN.csv")
 
     st.subheader("Final Cleaned Data (Count)")
-    st.dataframe(df_cleaned_count.head())
+    st.dataframe(df_count.head())
 
     st.subheader("Final Cleaned Data (Merge)")
-    st.dataframe(df_cleaned_merge.head())
+    st.dataframe(df_merge.head())
 
     st.write('---')
     st.title("Flight Data Cleaning Process")
