@@ -110,11 +110,13 @@ with tab2:
     # selectbox voor vertrek of aankomst
     lsv = st.selectbox("Selecteer Vertrek of Aankomst", df_count['LSV'].unique())
 
-    df_LSV = df_count[df_count['LSV'] == lsv]
+    df_LSV_count = df_count[df_count['LSV'] == lsv]
+    df_LSV_merge = df_merge[df_merge['LSV'] == lsv]
+
 
     # Center coordinates for the map
-    center_lat = df_LSV['Latitude'].mean()
-    center_lon = df_LSV['Longitude'].mean()
+    center_lat = df_LSV_count['Latitude'].mean()
+    center_lon = df_LSV_count['Longitude'].mean()
 
     # Function to determine the color based on delay
     def get_color(delay):
@@ -126,15 +128,15 @@ with tab2:
             return 'red'
 
     # Create a list of colors based on the delay
-    colors = df_LSV['delay_minutes'].apply(get_color)
+    colors = df_LSV_count['delay_minutes'].apply(get_color)
 
     # Create the map
     fig = go.Figure()
 
     # Add the main data trace without showing its legend
     fig.add_trace(go.Scattermapbox(
-        lat=df_LSV['Latitude'],
-        lon=df_LSV['Longitude'],
+        lat=df_LSV_count['Latitude'],
+        lon=df_LSV_count['Longitude'],
         mode='markers',
         marker=go.scattermapbox.Marker(
             size=10,
@@ -142,7 +144,7 @@ with tab2:
             opacity=0.7,
         ),
         hovertemplate='%{text}<extra></extra>',  # Show text only on hover, no extra info
-        text=df_LSV.apply(lambda row: f"{row['Name']}: {row['delay_minutes']} minutes delay. Based on {row['Count']} {lsv}", axis=1),
+        text=df_LSV_count.apply(lambda row: f"{row['Name']}: {row['delay_minutes']} minutes delay. Based on {row['Count']} {lsv}", axis=1),
         showlegend=False  # Prevent the main data trace from appearing in the legend
     ))
 
@@ -194,7 +196,7 @@ with tab2:
     st.header("Airport Delay Analysis at Schiphol")
 
     # Create the scatter plot
-    fig = px.scatter(df_LSV,
+    fig = px.scatter(df_LSV_merge,
                     x='STA_STD_ltc',
                     y='delay_minutes',
                     color='Gate_Changed',
@@ -211,14 +213,14 @@ with tab2:
 
     st.write('---')
     st.header("Average delay by gate adjustments")
-    
+
     # Average delay for flights with and without gate changes
-    vertraging_met_gate_verandering = df_LSV[df_LSV['Gate_Changed']]['delay_minutes'].mean()
-    vertraging_zonder_gate_verandering = df_LSV[~df_LSV['Gate_Changed']]['delay_minutes'].mean()
+    vertraging_met_gate_verandering = df_LSV_merge[df_LSV_merge['Gate_Changed']]['delay_minutes'].mean()
+    vertraging_zonder_gate_verandering = df_LSV_merge[~df_LSV_merge['Gate_Changed']]['delay_minutes'].mean()
 
     # Number of flights with and without gate changes
-    aantal_met_gate_verandering = df_LSV[df_LSV['Gate_Changed']].shape[0]
-    aantal_zonder_gate_verandering = df_LSV[~df_LSV['Gate_Changed']].shape[0]
+    aantal_met_gate_verandering = df_LSV_merge[df_LSV_merge['Gate_Changed']].shape[0]
+    aantal_zonder_gate_verandering = df_LSV_merge[~df_LSV_merge['Gate_Changed']].shape[0]
 
     # Data for the chart
     labels = ['Met gate-verandering', 'Zonder gate-verandering']
@@ -256,8 +258,8 @@ with tab2:
 
     st.write('---')
     st.header("Top 10 Delays")
-    chosen_airport = st.selectbox("Selecteer een luchthaven", df_LSV['Name'].unique())
-    df_name = df_LSV[df_LSV['Name'] == chosen_airport]
+    chosen_airport = st.selectbox("Selecteer een luchthaven", df_LSV_merge['Name'].unique())
+    df_name = df_LSV_merge[df_LSV_merge['Name'] == chosen_airport]
     col1, col2 = st.columns(2)
 
     df_vertraging = df_name[df_name['delay_minutes'] > 0]
