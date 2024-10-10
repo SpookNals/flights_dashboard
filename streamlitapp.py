@@ -1104,7 +1104,7 @@ fig.write_html('residual_plot.html')
         x=predictions,
         y=residuals,
         mode='markers',
-        marker=dict(color='blue', size=10, opacity=0.5),
+        marker=dict(color='lightblue', size=10, opacity=0.5),
         name='Residuals'
     ))
 
