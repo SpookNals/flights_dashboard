@@ -1025,6 +1025,8 @@ fig.update_layout(
 # save the fig
 fig.write_html('residual_plot.html')
 """
+    st.code(code, language='python')
+    st.write('---')
     import plotly.graph_objs as go
     import statsmodels.api as sm
     from sklearn.model_selection import train_test_split
