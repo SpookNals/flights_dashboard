@@ -920,113 +920,74 @@ all_flights.to_csv('all_flights.csv')
 
 with tab5:
     code = """
-import plotly.graph_objs as go
-import numpy as np
-import statsmodels.api as sm
-from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
-import pandas as pd
-import numpy as np
+    df = df_merge[df_merge['Name'].str.contains('Schiphol', case=False)]
 
+            # Zet de tijdkolommen om naar datetime
+    df['STA_STD_ltc'] = pd.to_datetime(df['STA_STD_ltc'])
+    df['ATA_ATD_ltc'] = pd.to_datetime(df['ATA_ATD_ltc'])
 
-        # Filter alleen Schiphol Airport
-df = airport_df_clean[airport_df_clean['Name'].str.contains('Schiphol', case=False)]
+            # Voeg een kolom toe met de vertraging in minuten
+    df['delay_minutes'] = (df['ATA_ATD_ltc'] - df['STA_STD_ltc']).dt.total_seconds() / 60
 
-        # Zet de tijdkolommen om naar datetime
-df['STA_STD_ltc'] = pd.to_datetime(df['STA_STD_ltc'])
-df['ATA_ATD_ltc'] = pd.to_datetime(df['ATA_ATD_ltc'])
+            # Voeg een kolom toe met de dag van de week
+    df['day_of_week'] = df['STA_STD_ltc'].dt.day_name()
 
-        # Voeg een kolom toe met de vertraging in minuten
-df['delay_minutes'] = (df['ATA_ATD_ltc'] - df['STA_STD_ltc']).dt.total_seconds() / 60
+            # Voeg een nieuwe kolom toe voor dinsdag of woensdag (1 als dinsdag of woensdag, anders 0)
+    df['is_tuesday_or_wednesday'] = df['day_of_week'].apply(lambda x: 1 if x in ['Tuesday', 'Wednesday'] else 0)
 
-        # Voeg een kolom toe met de dag van de week
-df['day_of_week'] = df['STA_STD_ltc'].dt.day_name()
+            # Voeg een nieuwe kolom toe voor vóór of na COVID-19 (1 voor vóór, 0 voor na)
+    df['before_covid'] = df['STA_STD_ltc'].apply(lambda x: 1 if x < pd.Timestamp('2020-03-01') else 0)
 
-        # Voeg een nieuwe kolom toe voor dinsdag of woensdag (1 als dinsdag of woensdag, anders 0)
-df['is_tuesday_or_wednesday'] = df['day_of_week'].apply(lambda x: 1 if x in ['Tuesday', 'Wednesday'] else 0)
+            # Voeg een kolom toe voor LSV (1 voor Arrivals, 0 voor Departures)
+    df['LSV_binary'] = df['LSV'].apply(lambda x: 1 if x == 'Arrivals' else 0)
 
-        # Voeg een nieuwe kolom toe voor vóór of na COVID-19 (1 voor vóór, 0 voor na)
-df['before_covid'] = df['STA_STD_ltc'].apply(lambda x: 1 if x < pd.Timestamp('2020-03-01') else 0)
+            # Step 3: Groeperen op vluchtcode (FLT) en het gemiddelde van de vertraging berekenen
+    df_avg_delay = df.groupby('FLT')['delay_minutes'].mean().reset_index()
 
-        # Voeg een kolom toe voor LSV (1 voor Arrivals, 0 voor Departures)
-df['LSV_binary'] = df['LSV'].apply(lambda x: 1 if x == 'Arrivals' else 0)
+            # Step 4: Voeg een nieuwe kolom toe met de categorieën
+    df_avg_delay['delay_category'] = df_avg_delay['delay_minutes'].apply(
+                lambda x: 1 if x > 15 else 0)  # 1 als vertraging > 15 minuten, anders 0
 
-        # Step 3: Groeperen op vluchtcode (FLT) en het gemiddelde van de vertraging berekenen
-df_avg_delay = df.groupby('FLT')['delay_minutes'].mean().reset_index()
+            # Step 5: Voeg de delay_category toe aan het oorspronkelijke dataframe op basis van FLT
+    df = pd.merge(df, df_avg_delay[['FLT', 'delay_category']], on='FLT', how='left')
 
-        # Step 4: Voeg een nieuwe kolom toe met de categorieën
-df_avg_delay['delay_category'] = df_avg_delay['delay_minutes'].apply(
-            lambda x: 1 if x > 15 else 0)  # 1 als vertraging > 15 minuten, anders 0
+            # Step 6: Kwadrateer de delay_category
+    df['delay_category'] = df['delay_category'] ** 2  # Delay category in het kwadraat
 
-        # Step 5: Voeg de delay_category toe aan het oorspronkelijke dataframe op basis van FLT
-df = pd.merge(df, df_avg_delay[['FLT', 'delay_category']], on='FLT', how='left')
+            # Step 7: Voeg een kolom toe met de 8e machtswortel van de vertraging in minuten
+    df['eighth_root_delay_minutes'] = np.power(df['delay_minutes'].clip(lower=0), 1 / 8)  # 8e machtswortel, clip voor negatieve waarden
 
-        # Step 6: Kwadrateer de delay_category
-df['delay_category'] = df['delay_category'] ** 2  # Delay category in het kwadraat
+            # Step 8: Definieer onafhankelijke en afhankelijke variabelen voor het regressiemodel
+    X = df[['delay_category', 'is_tuesday_or_wednesday', 'before_covid', 'LSV_binary']]  # Onafhankelijke variabelen
+    y = df['eighth_root_delay_minutes']  # Afhankelijke variabele (8e machtswortel van vertraging)
 
-        # Step 7: Voeg een kolom toe met de 8e machtswortel van de vertraging in minuten
-df['eighth_root_delay_minutes'] = np.power(df['delay_minutes'].clip(lower=0), 1 / 8)  # 8e machtswortel, clip voor negatieve waarden
+        # Voeg een constante toe aan het model
+    X = sm.add_constant(X)
 
-        # Step 8: Definieer onafhankelijke en afhankelijke variabelen voor het regressiemodel
-X = df[['delay_category', 'is_tuesday_or_wednesday', 'before_covid', 'LSV_binary']]  # Onafhankelijke variabelen
-y = df['eighth_root_delay_minutes']  # Afhankelijke variabele (8e machtswortel van vertraging)
+        # Step 9: Splits de data in trainings- en testsets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Voeg een constante toe aan het model
-X = sm.add_constant(X)
+        # Step 10: Maak het lineaire regressiemodel aan
+    model = sm.OLS(y_train, X_train).fit()
 
-    # Step 9: Splits de data in trainings- en testsets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+            # Step 11: Bekijk de modelresultaten
+    #streamlit model summary
+    st.write(model.summary())
 
-    # Step 10: Maak het lineaire regressiemodel aan
-model = sm.OLS(y_train, X_train).fit()
+            # Step 12: Voorspel op de testset
+    predictions_eighth_root = model.predict(X_test)
 
-        # Step 11: Bekijk de modelresultaten
-#write model summary to a file
-with open('model_summary.txt', 'w') as f:
-    f.write(model.summary().as_text())
+            # Step 13: Verhef de voorspellingen tot de 8e macht om ze terug te transformeren naar de oorspronkelijke schaal
+    predictions = np.power(predictions_eighth_root, 8)
 
-        # Step 12: Voorspel op de testset
-predictions_eighth_root = model.predict(X_test)
+            # Step 14: Evalueer het model met de RMSE op de originele schaal
+    rmse = np.sqrt(np.mean((predictions - np.power(y_test, 8)) ** 2))  # Vergelijk met de 8e machts originele y_test
+    print(f"Root Mean Squared Error (RMSE): {rmse:.2f}")
 
-        # Step 13: Verhef de voorspellingen tot de 8e macht om ze terug te transformeren naar de oorspronkelijke schaal
-predictions = np.power(predictions_eighth_root, 8)
-
-        # Step 14: Evalueer het model met de RMSE op de originele schaal
-rmse = np.sqrt(np.mean((predictions - np.power(y_test, 8)) ** 2))  # Vergelijk met de 8e machts originele y_test
-print(f"Root Mean Squared Error (RMSE): {rmse:.2f}")
-
-# Create the residual plot using Plotly
-residuals = predictions_eighth_root - y_test 
-
-fig = go.Figure()
-
-# Add scatter plot for residuals
-fig.add_trace(go.Scatter(
-    x=predictions,
-    y=residuals,
-    mode='markers',
-    marker=dict(color='blue', size=10, opacity=0.5),
-    name='Residuals'
-))
-
-# Add horizontal line at y=0
-fig.add_shape(type="line", x0=min(predictions), x1=max(predictions), y0=0, y1=0,
-              line=dict(color='red', dash='dash'))
-
-# Customize layout
-fig.update_layout(
-    title="Residual Plot",
-    xaxis_title="Voorspelde vertraging (in minuten)",
-    yaxis_title="Residuen (Voorspelde - Werkelijke)",
-    height=500,  # Reduced plot height for better display
-    width=800  # Adjusted plot width
-)
-
-# save the fig
-fig.write_html('residual_plot.html')
-"""
+    # Create the residual plot using Plotly
+    residuals = predictions_eighth_root - y_test 
+    """
     st.code(code, language='python')
-    st.write('---')
     import plotly.graph_objs as go
     import statsmodels.api as sm
     from sklearn.model_selection import train_test_split
@@ -1106,7 +1067,7 @@ fig.write_html('residual_plot.html')
         x=predictions,
         y=residuals,
         mode='markers',
-        marker=dict(color='lightblue', size=10, opacity=0.5),
+        marker=dict(color='blue', size=10, opacity=0.5),
         name='Residuals'
     ))
 
